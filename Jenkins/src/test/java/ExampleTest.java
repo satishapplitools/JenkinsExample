@@ -76,9 +76,7 @@ public class ExampleTest {
         eyes.checkWindow("Home Page");
 
         //Adding an extra line of comment
-        //Adding second line
-        //Adding third line
-        //Adding fourth line
+                
 
         // This will create a test with two test steps.
         driver.findElement(By.id("log-in")).click();
