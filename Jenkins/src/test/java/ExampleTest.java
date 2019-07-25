@@ -77,6 +77,7 @@ public class ExampleTest {
 
         //Adding an extra line of comment
         //Adding line
+        //Adding two more lines
 
         // This will create a test with two test steps.
         driver.findElement(By.id("log-in")).click();
