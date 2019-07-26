@@ -33,7 +33,7 @@ public class ExampleTest {
     @BeforeClass
     public static void batchInitialization(){
         batch = new BatchInfo(System.getenv("APPLITOOLS_BATCH_NAME"));
-        batch.setSequenceName("GitHub Integration");
+        //batch.setSequenceName("GitHub Integration");
         System.out.println("Batch Name :" + System.getenv("APPLITOOLS_BATCH_NAME"));
     }
 
