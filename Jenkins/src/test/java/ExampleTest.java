@@ -76,6 +76,7 @@ public class ExampleTest {
         eyes.checkWindow("Home Page");
 
         //Adding an extra line of comment
+        //Adding a comment
 
 
         // This will create a test with two test steps.
