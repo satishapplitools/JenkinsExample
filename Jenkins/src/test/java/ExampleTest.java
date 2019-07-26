@@ -75,6 +75,10 @@ public class ExampleTest {
         // Visual checkpoint #1 - Check the login page.
         eyes.checkWindow("Home Page");
 
+        //Adding an extra line of comment
+        //Adding a comment
+
+
         // This will create a test with two test steps.
         driver.findElement(By.id("log-in")).click();
 
