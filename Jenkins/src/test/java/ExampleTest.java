@@ -33,7 +33,7 @@ public class ExampleTest {
     @BeforeClass
     public static void batchInitialization(){
         batch = new BatchInfo(System.getenv("APPLITOOLS_BATCH_NAME"));
-        //batch.setSequenceName("GitHub Integration");
+        batch.setSequenceName("GitHub Integration");
         System.out.println("Batch Name :" + System.getenv("APPLITOOLS_BATCH_NAME"));
     }
 
@@ -61,7 +61,7 @@ public class ExampleTest {
         }
 
         //End of - Set only once per Jenkins job
-        batch.
+        //batch.
         eyes.setBatch(batch);
 
         //set new baseline images. Use this when your site has changed without having to do in the dashboard.
