@@ -40,6 +40,7 @@ public class ExampleTest {
     public void setUp () throws Exception {
 
         eyes.setApiKey(applitoolsKey);
+        System.out.println("Applitools API Key :" + System.getenv("APPLITOOLS_API_KEY"));
         //Hide scrollbars on older browsers. Usually IE includes them...
         eyes.setHideScrollbars(true);
         //Take a full page screenshot
@@ -53,7 +54,7 @@ public class ExampleTest {
         //http://support.applitools.com/customer/en/portal/articles/2689601-integration-with-the-jenkins-plugin
 
         if (System.getenv("APPLITOOLS_BATCH_ID") != null ) {
-            System.out.println("Applitools Batch ID is " + System.getenv("APPLITOOLS_BATCH_ID"))
+            System.out.println("Applitools Batch ID is " + System.getenv("APPLITOOLS_BATCH_ID"));
             batch.setId(System.getenv("APPLITOOLS_BATCH_ID"));
         }
 
