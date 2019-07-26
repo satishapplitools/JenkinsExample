@@ -40,6 +40,7 @@ public class ExampleTest {
     public void setUp () throws Exception {
 
         eyes.setApiKey(applitoolsKey);
+        System.out.println("Applitools API Key :" + System.getenv("APPLITOOLS_API_KEY"));
         //Hide scrollbars on older browsers. Usually IE includes them...
         eyes.setHideScrollbars(true);
         //Take a full page screenshot
