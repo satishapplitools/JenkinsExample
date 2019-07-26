@@ -32,7 +32,8 @@ public class ExampleTest {
 
     @BeforeClass
     public static void batchInitialization(){
-        batch = new BatchInfo("Jenkins Plugin Example");
+        batch = new BatchInfo(System.getenv("APPLITOOLS_BATCH_NAME"));
+        System.out.println("Batch Name :" + System.getenv("APPLITOOLS_BATCH_NAME"));
     }
 
     @Before
@@ -52,6 +53,7 @@ public class ExampleTest {
         //http://support.applitools.com/customer/en/portal/articles/2689601-integration-with-the-jenkins-plugin
 
         if (System.getenv("APPLITOOLS_BATCH_ID") != null ) {
+            System.out.println("Applitools Batch ID is " + System.getenv("APPLITOOLS_BATCH_ID"))
             batch.setId(System.getenv("APPLITOOLS_BATCH_ID"));
         }
 
@@ -76,8 +78,6 @@ public class ExampleTest {
         eyes.checkWindow("Home Page");
 
         //Adding an extra line of comment
-        //Adding a comment
-        //Adding an extra line
 
         // This will create a test with two test steps.
         driver.findElement(By.id("log-in")).click();
