@@ -53,7 +53,7 @@ public class ExampleTest {
         //http://support.applitools.com/customer/en/portal/articles/2689601-integration-with-the-jenkins-plugin
 
         if (System.getenv("APPLITOOLS_BATCH_ID") != null ) {
-            System.out.println("Applitools Batch ID is " + System.getenv("APPLITOOLS_BATCH_ID"))
+            System.out.println("Applitools Batch ID is " + System.getenv("APPLITOOLS_BATCH_ID"));
             batch.setId(System.getenv("APPLITOOLS_BATCH_ID"));
         }
 
