@@ -70,7 +70,7 @@ public class ExampleTest {
     public void GithubHomePage () throws Exception {
         driver = new ChromeDriver();
         System.out.println("Local branch name" + System.getenv("GIT_LOCAL_BRANCH"));
-        eyes.open(driver, "Demo App", "Demo App", new RectangleSize(900, 600));
+        eyes.open(driver, "Demo App", "Demo App", new RectangleSize(1028, 800));
 
         driver.get("https://demo.applitools.com");
         // Visual checkpoint #1 - Check the login page.
