@@ -79,13 +79,13 @@ public class ExampleTest {
     @Test
     public void GithubHomePage () throws Exception {
         driver = new ChromeDriver();
-        eyes.open(driver, "Demo App", "Demo App", new RectangleSize(900, 600));
-       // eyes.setParentBranchName("master");
+
+        eyes.open(driver, "Demo App", "Jenkins GitHub Example", new RectangleSize(900, 600));
+
+
         driver.get("https://demo.applitools.com");
         // Visual checkpoint #1 - Check the login page.
         eyes.checkWindow("Home Page");
-
-        //Adding an extra line of comment
 
         // This will create a test with two test steps.
         driver.findElement(By.id("log-in")).click();
