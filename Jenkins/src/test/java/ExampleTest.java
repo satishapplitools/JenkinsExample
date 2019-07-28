@@ -70,9 +70,6 @@ public class ExampleTest {
     public void GithubHomePage () throws Exception {
         driver = new ChromeDriver();
         System.out.println("Local branch name" + System.getenv("GIT_LOCAL_BRANCH"));
-        //How come it comes as Local
-        eyes.setBranchName(System.getenv("GIT_LOCAL_BRANCH"));
-        eyes.setParentBranchName("satishapplitools/JenkinsExample/master");
         eyes.open(driver, "Demo App", "Demo App", new RectangleSize(900, 600));
 
         driver.get("https://demo.applitools.com");
