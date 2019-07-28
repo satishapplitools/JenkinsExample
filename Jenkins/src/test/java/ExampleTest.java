@@ -53,7 +53,7 @@ public class ExampleTest {
         //Stitch pages together and remove floating headers and footers...
         eyes.setStitchMode(StitchMode.CSS);
         //Set match level to Layout2 for dynamic content sites.
-        eyes.setMatchLevel(MatchLevel.LAYOUT2);
+        eyes.setMatchLevel(MatchLevel.Strict);
 
         //Set batch name. Essentially a folder name to group your images.
         //Set only once per Jenkins job
