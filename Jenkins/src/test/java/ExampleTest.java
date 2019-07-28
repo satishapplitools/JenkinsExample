@@ -74,7 +74,7 @@ public class ExampleTest {
         driver.get("https://demo.applitools.com");
         // Visual checkpoint #1 - Check the login page.
         eyes.checkWindow("Home Page");
-
+        //New comment
         // This will create a test with two test steps.
         driver.findElement(By.id("log-in")).click();
 
