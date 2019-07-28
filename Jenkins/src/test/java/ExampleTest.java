@@ -33,6 +33,7 @@ public class ExampleTest {
     @BeforeClass
     public static void batchInitialization(){
         batch = new BatchInfo(System.getenv("APPLITOOLS_BATCH_NAME"));
+        //Added comment
         System.out.println("Batch Name :" + System.getenv("APPLITOOLS_BATCH_NAME"));
     }
 
@@ -41,8 +42,7 @@ public class ExampleTest {
 
         eyes.setApiKey(applitoolsKey);
         System.out.println("Applitools API Key :" + System.getenv("APPLITOOLS_API_KEY"));
-        //Print API Key
-        //Some more comments
+        //Lets see now
         //Hide scrollbars on older browsers. Usually IE includes them...
         eyes.setHideScrollbars(true);
         //Take a full page screenshot
@@ -51,6 +51,7 @@ public class ExampleTest {
         eyes.setStitchMode(StitchMode.CSS);
         //Set match level to Layout2 for dynamic content sites.
         eyes.setMatchLevel(MatchLevel.LAYOUT2);
+
         //Set batch name. Essentially a folder name to group your images.
         //Set only once per Jenkins job
         //http://support.applitools.com/customer/en/portal/articles/2689601-integration-with-the-jenkins-plugin
@@ -61,6 +62,7 @@ public class ExampleTest {
         }
 
         //End of - Set only once per Jenkins job
+        //batch.
         eyes.setBatch(batch);
 
         //set new baseline images. Use this when your site has changed without having to do in the dashboard.
@@ -75,7 +77,7 @@ public class ExampleTest {
     public void GithubHomePage () throws Exception {
         driver = new ChromeDriver();
         eyes.open(driver, "Demo App", "Demo App", new RectangleSize(900, 600));
-
+       // eyes.setParentBranchName("master");
         driver.get("https://demo.applitools.com");
         // Visual checkpoint #1 - Check the login page.
         eyes.checkWindow("Home Page");
