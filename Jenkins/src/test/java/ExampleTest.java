@@ -74,6 +74,9 @@ public class ExampleTest {
         driver.get("https://demo.applitools.com");
         // Visual checkpoint #1 - Check the login page.
         eyes.checkWindow("Home Page");
+        System.out.println("Local branch name" + System.getenv("GIT_LOCAL_BRANCH"));
+        eyes.setBranchName(System.getenv("GIT_LOCAL_BRANCH"));
+        eyes.setParentBranchName("satishapplitools/JenkinsExample/master")
         //New comment
         // This will create a test with two test steps.
         driver.findElement(By.id("log-in")).click();
