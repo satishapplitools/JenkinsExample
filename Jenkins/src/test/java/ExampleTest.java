@@ -34,6 +34,7 @@ public class ExampleTest {
     public static void batchInitialization(){
         batch = new BatchInfo(System.getenv("APPLITOOLS_BATCH_NAME"));
         //Added comment
+        //Removed super commnet
         System.out.println("Batch Name :" + System.getenv("APPLITOOLS_BATCH_NAME"));
     }
 
