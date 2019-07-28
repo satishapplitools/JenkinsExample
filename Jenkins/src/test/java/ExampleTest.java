@@ -91,7 +91,7 @@ public class ExampleTest {
         driver.findElement(By.id("log-in")).click();
 
         // Visual checkpoint #2 - Check the app page.
-        eyes.checkWindow("App Window2");
+        eyes.checkWindow("App Window");
 
         // End the test.
 
