@@ -33,7 +33,6 @@ public class ExampleTest {
     @BeforeClass
     public static void batchInitialization(){
         batch = new BatchInfo(System.getenv("APPLITOOLS_BATCH_NAME"));
-        //batch.setSequenceName("GitHub Integration");
         System.out.println("Batch Name :" + System.getenv("APPLITOOLS_BATCH_NAME"));
     }
 
@@ -51,6 +50,7 @@ public class ExampleTest {
         eyes.setStitchMode(StitchMode.CSS);
         //Set match level to Layout2 for dynamic content sites.
         eyes.setMatchLevel(MatchLevel.LAYOUT2);
+
         //Set batch name. Essentially a folder name to group your images.
         //Set only once per Jenkins job
         //http://support.applitools.com/customer/en/portal/articles/2689601-integration-with-the-jenkins-plugin
@@ -76,7 +76,7 @@ public class ExampleTest {
     public void GithubHomePage () throws Exception {
         driver = new ChromeDriver();
         eyes.open(driver, "Demo App", "Demo App", new RectangleSize(900, 600));
-
+       // eyes.setParentBranchName("master");
         driver.get("https://demo.applitools.com");
         // Visual checkpoint #1 - Check the login page.
         eyes.checkWindow("Home Page");
