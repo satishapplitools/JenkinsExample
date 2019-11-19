@@ -69,6 +69,7 @@ public class ExampleTest {
         //set new baseline images. Use this when your site has changed without having to do in the dashboard.
         //eyes.setSaveFailedTests(true);
 
+        //some changes
         //output detailed log data to console...
         eyes.setLogHandler(new StdoutLogHandler(true));
 
