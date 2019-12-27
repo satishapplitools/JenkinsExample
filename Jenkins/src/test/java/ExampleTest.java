@@ -33,10 +33,7 @@ public class ExampleTest {
     @BeforeClass
     public static void batchInitialization(){
         batch = new BatchInfo(System.getenv("APPLITOOLS_BATCH_NAME"));
-        //Added comment
-        //Removed super commnet
-        //Adding one more comment
-        //Bad luck one more
+
         System.out.println("Batch Name :" + System.getenv("APPLITOOLS_BATCH_NAME"));
     }
 
@@ -47,13 +44,14 @@ public class ExampleTest {
         System.out.println("Applitools API Key :" + System.getenv("APPLITOOLS_API_KEY"));
         //Lets see now
         //Hide scrollbars on older browsers. Usually IE includes them...
+        //Demo
         eyes.setHideScrollbars(true);
         //Take a full page screenshot
         eyes.setForceFullPageScreenshot(false);
         //Stitch pages together and remove floating headers and footers...
         eyes.setStitchMode(StitchMode.CSS);
         //Set match level to Layout2 for dynamic content sites.
-        eyes.setMatchLevel(MatchLevel.LAYOUT2);
+        eyes.setMatchLevel(MatchLevel.STRICT);
 
         //Set batch name. Essentially a folder name to group your images.
         //Set only once per Jenkins job
@@ -71,6 +69,7 @@ public class ExampleTest {
         //set new baseline images. Use this when your site has changed without having to do in the dashboard.
         //eyes.setSaveFailedTests(true);
 
+        //some changes
         //output detailed log data to console...
         eyes.setLogHandler(new StdoutLogHandler(true));
 
