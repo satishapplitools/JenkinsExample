@@ -33,7 +33,7 @@ public class ExampleTest {
     @BeforeClass
     public static void batchInitialization(){
         batch = new BatchInfo(System.getenv("APPLITOOLS_BATCH_NAME"));
-
+        batch.setId("BitBucke_Integration")
         System.out.println("Batch Name :" + System.getenv("APPLITOOLS_BATCH_NAME"));
     }
 
@@ -57,10 +57,10 @@ public class ExampleTest {
         //Set only once per Jenkins job
         //http://support.applitools.com/customer/en/portal/articles/2689601-integration-with-the-jenkins-plugin
 
-        if (System.getenv("APPLITOOLS_BATCH_ID") != null ) {
+        /*if (System.getenv("APPLITOOLS_BATCH_ID") != null ) {
             System.out.println("Applitools Batch ID is " + System.getenv("APPLITOOLS_BATCH_ID"));
             batch.setId(System.getenv("APPLITOOLS_BATCH_ID"));
-        }
+        }*/
 
         //End of - Set only once per Jenkins job
         //batch.
